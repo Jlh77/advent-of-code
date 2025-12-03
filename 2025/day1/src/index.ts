@@ -1,39 +1,41 @@
 import { input } from "./input";
 
-function dial(instructions: string): number {
-  const instructionsList = instructions.split("\n");
+const data = input.split("\n");
 
-  const startingPosition = 50;
+const solution = (instructions: string[]) => {
+  let currentRotation = 50;
+  let zeroesLandedOn = 0;
+  let zeroesPassed = 0;
 
-  let position = startingPosition;
+  instructions.forEach((instruction) => {
+    const direction = instruction[0];
 
-  const firstPosition = 0;
+    const amountToMove =
+      parseInt(instruction.slice(1)) * (direction === "L" ? -1 : 1);
 
-  const lastPosition = 90;
-
-  instructionsList.forEach((instruction) => {
-    // "L" or "R"
-    const direction = instruction.substring(0, 1);
-
-    let amountToTurn = Number(instruction.split(direction)[1]);
-
-    if (direction === "L") {
-      amountToTurn = -Math.abs(amountToTurn);
+    if (amountToMove > 0) {
+      zeroesPassed +=
+        Math.floor((currentRotation + amountToMove) / 100) -
+        Math.floor(currentRotation / 100);
+    } else {
+      zeroesPassed +=
+        Math.floor((currentRotation - 1) / 100) -
+        Math.floor((currentRotation - 1 + amountToMove) / 100);
     }
 
-    position += amountToTurn;
+    currentRotation = (currentRotation + amountToMove + 100) % 100;
 
-    // Remember it starts at 0, so take away one
-
-    if (position > lastPosition) position -= lastPosition - 1;
-    else if (position < firstPosition) position += lastPosition - 1;
+    if (currentRotation === 0) zeroesLandedOn++;
   });
 
-  return position;
-}
+  return {
+    zeroesLandedOn,
+    zeroesPassed,
+  };
+};
 
-// Test/Result
+const { zeroesLandedOn, zeroesPassed } = solution(data);
 
-const answer = dial(input);
+console.log("Part 1 Answer:", zeroesLandedOn);
 
-console.log("ANSWER: ", answer);
+console.log("Part 2 Answer:", zeroesPassed);

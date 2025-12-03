@@ -8,7 +8,6 @@
 
 ## Part 1:
 
-
 --- Day 1: Secret Entrance ---
 
 The Elves have good news and bad news.
@@ -73,6 +72,17 @@ Analyze the rotations in your attached document. What's the actual password to o
 <details>
   <summary>Click to reveal</summary>
 
-  TODO
+1021
+
+</details>
+
+## Part 2:
+
+### Answer
+
+<details>
+  <summary>Click to reveal</summary>
+
+5933
 
 </details>
