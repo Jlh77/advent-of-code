@@ -6,20 +6,20 @@ Since there are only 12 days in this years AOC, each day i am going to use a dif
 
 ## Daily Language Plan
 
-| Day | Language     |
-|-----|--------------|
-| 1   | TypeScript   |
-| 2   | Python       |
-| 3   | Rust         |
-| 4   | Go           |
-| 5   | Java         |
-| 6   | C#           |
-| 7   | Kotlin       |
-| 8   | Ruby         |
-| 9   | Swift        |
-| 10  | Haskell      |
-| 11  | C++          |
-| 12  | Julia        |
+| Day | Language   |
+| --- | ---------- |
+| 1   | TypeScript |
+| 2   | Python     |
+| 3   | Go         |
+| 4   | Rust       |
+| 5   | Java       |
+| 6   | C#         |
+| 7   | Bash       |
+| 8   | Ruby       |
+| 9   | Swift      |
+| 10  | Haskell    |
+| 11  | C++        |
+| 12  | Zig        |
 
 Each day's solution is in its respective folder, and the README in each folder will indicate the language used and any setup instructions.
 
