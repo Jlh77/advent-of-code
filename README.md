@@ -11,15 +11,15 @@ Since there are only 12 days in this years AOC, each day i am going to use a dif
 | 1   | TypeScript |
 | 2   | Python     |
 | 3   | Go         |
-| 4   | Rust       |
 | 5   | Java       |
 | 6   | C#         |
-| 7   | Bash       |
 | 8   | Ruby       |
+| 7   | Bash       |
 | 9   | Swift      |
 | 10  | Haskell    |
 | 11  | C++        |
 | 12  | Zig        |
+| 4   | Rust       |
 
 Each day's solution is in its respective folder, and the README in each folder will indicate the language used and any setup instructions.
 
